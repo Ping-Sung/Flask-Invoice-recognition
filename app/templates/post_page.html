@@ -1,0 +1,15 @@
+{% for post in posts.items %}
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="{{ url_for('userpage', account=post.author.account)}}">
+      <img class="media-object" src="{{ post.author.avatar_path }}" alt="..." width="50px" >
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ post.author.username }}</h4>
+    <small>{{ post.timestamp}}</small>
+    <p>{{ post.body }}</p>
+  </div>
+</div>
+{% endfor %}
+

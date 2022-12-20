@@ -1,0 +1,9 @@
+<p>Dear, {{ user.username }}</p>
+<p>
+    To reset your password
+    <a href="{{ url_for('reset_password', token=token, _external=True) }}">
+        Click Here
+    </a>.
+</p>
+<p>Sincerely,</p>
+<p>Kevin</p>

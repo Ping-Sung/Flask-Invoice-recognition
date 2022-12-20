@@ -1,0 +1,11 @@
+flask
+flask-bootstrap
+Flask-SQLAlchemy
+Flask-WTF
+flask-bcrypt
+flask-login
+Flask-Mail
+wtforms
+email_validator
+pyjwt
+azure-ai-formrecognizer==3.2.0

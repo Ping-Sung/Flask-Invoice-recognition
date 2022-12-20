@@ -26,7 +26,7 @@ def index():
         flash('You have post a new tweet.', category='success')
     follow_data = [len(current_user.followers), len(current_user.followed)]
     page = request.args.get('page', default=1, type=int)
-    posts = db.paginate(Post.query.order_by(Post.timestamp.desc()), per_page=10, error_out=False, page=page)
+    posts = db.paginate(Post.query.order_by(Post.timestamp.desc()), per_page=2, error_out=False, page=page)
     url_for_page = '/'
     return render_template('index.html', title = title, form=form, follow_data=follow_data, posts=posts, url_for_page=url_for_page)
 
